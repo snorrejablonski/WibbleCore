@@ -10,14 +10,14 @@ namespace WibbleCore.Controllers
 {
     public class MoviesController : Controller
     {
+
+        MoviesViewModel viewModel = new MoviesViewModel();
         public IActionResult Index()
         {
-            var viewModel = new MoviesViewModel();
-
             return View("List", viewModel);
         }
 
-        public ActionResult Details(int id, MoviesViewModel viewModel)
+        public ActionResult Details(int id)
         {
             var movie = viewModel.Get(id);
             

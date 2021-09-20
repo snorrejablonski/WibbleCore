@@ -9,6 +9,6 @@
 <ul>
     @foreach (var movie in Model.Movies)
     {
-    <li>@Html.ActionLink(movie.Name, "Details", "Movies", new { movie.Id, Model })</li>
+    <li>@Html.ActionLink(movie.Name, "Details", "Movies", new { movie.Id})</li>
     }
 </ul>
