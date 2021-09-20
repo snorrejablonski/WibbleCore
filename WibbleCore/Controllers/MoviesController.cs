@@ -20,6 +20,9 @@ namespace WibbleCore.Controllers
         public ActionResult Details(int id)
         {
             var movie = viewModel.Get(id);
+
+            if (movie == null)
+                return NotFound();
             
             return View(movie);
         }
